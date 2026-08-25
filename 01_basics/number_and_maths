@@ -1,0 +1,46 @@
+const score=400;
+console.log(score);
+
+const balance=new Number(100)
+console.log(balance);
+
+// to convert in string
+console.log(balance.toString());
+
+// to fix the precision value
+console.log(balance.toFixed(2));
+
+const otherNum=23.894;
+console.log(otherNum.toPrecision(3));
+  
+// to convert in readable values
+
+const hundreds=1000000
+console.log(hundreds.toLocaleString('en-IN'));//in indian redable value
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// math
+
+console.log(Math);
+ console.log(Math.abs(-4));//convert to +ve always
+ console.log(Math.round(4.6));//roundOff
+ console.log(Math.ceil(4.2));//takes upper value
+ console.log(Math.floor(4.2));//takes lower value
+ console.log(Math.min(4,3,2));
+ console.log(Math.max(4,3,2));
+
+ console.log(Math.random());// always values between 0 to 1
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
