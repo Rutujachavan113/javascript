@@ -1,0 +1,47 @@
+//this keyword-->it referce the current context
+console.log(this); //-->{} //in node this refece to empty object because globle is emplty
+
+// in browser this referce to the window  because global object is window object
+
+const user={
+    username:"sham",
+    price:199,
+
+    welcomemsg:function () {
+        console.log(`${this.username}, welcome to the team`);  
+    }
+}
+user.welcomemsg()
+
+//we can not refer this to the function variable we can only refer to the object
+
+function chai(){
+    let username="rutuja"
+    console.log(this.username);//-->undefiend //so we can not use this for function variable   
+}
+chai()
+
+// arrow function-->()=>{}  //An arrow function is a shorter way to write a function in JavaScript.
+
+    const addTwo=(num1,num2)=>{
+        return num1+num2
+    }
+    console.log(addTwo(3,4));
+
+    // if yoyu use { }then you have to use return keyword otherwise not
+
+    // implicit return
+    const addOne=(num1,num2)=> num1+num2
+console.log(addOne(4,5));
+
+ const add3=(num1,num2)=> (num1+num2)  //we can use ()
+console.log(add3(5,6));
+
+// we can return objects also but for that we have to use ({})
+ const add4=(num1,num2)=> ({username:"rutuja"}) //we can use ()
+ console.log(add4(3,4));
+ 
+
+
+
+     
