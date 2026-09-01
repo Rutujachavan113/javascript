@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- direct give the list elemnts -->
+    <ul class="language">
+        <li>javaScript</li>
+    </ul>
+    
+</body>
+<!-- to dynamically change the list elements -->
+<script>
+    function addLang(langName){
+        const list=document.createElement("li");
+        const node=document.createTextNode(langName);
+        list.appendChild(node)
+        document.querySelector(".language").appendChild(list);
+        
+    }
+    addLang("java")
+
+    // edit
+    const newList=document.createElement("li")
+    newList.innerHTML="html"
+    document.querySelector(".language").appendChild(newList)
+
+    // remove
+    const removeList=document.querySelector("li:last-child");
+    removeList.remove();
+    
+</script>
+</html>
