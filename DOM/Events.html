@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <button id="btn2"> double click</button>
+
+    <form>
+    <input type="text" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+</form>
+
+<ul id="images">
+    <li class="img"><img src="https://png.pngtree.com/thumb_back/fh260/background/20241010/pngtree-the-bengal-tiger-emblem-of-wild-image_16362570.jpg" alt="animal"></li>
+    <li class="img"> <img src="https://tropicalexotics.in/cdn/shop/files/rn-image_picker_lib_temp_12dad1f1-7e04-400d-96d9-bb9a61756041_2048x.png?v=1774675609" alt="fruit"></li>
+    <li class="img"><img src="https://static4.depositphotos.com/1011469/288/i/450/depositphotos_2883943-stock-photo-closeup-of-blooming-lotus-flower.jpg" alt="flower"></li>
+</ul>
+
+</body>
+<script>
+    // click
+    document.querySelector("#btn").
+    addEventListener("click",()=>{
+        console.log("button clicked");
+    }   
+    );
+
+    // double click
+    document.querySelector("#btn2").addEventListener("dblclick",()=>{
+        console.log("double clicked");
+        
+    })
+
+    // submit
+
+    const form=document.querySelector("form")
+
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        console.log("form submitted");
+        
+    })
+
+    // to remove image after clicking
+
+    const removeIt=document.querySelector("#images")
+
+    removeIt.addEventListener("click",(e)=>{
+        if(e.target.tagName==='IMG'){
+            let removeImg=e.target.parentNode
+            removeImg.remove();
+        }
+    })
+    
+</script>
+</html>
